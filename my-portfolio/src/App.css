@@ -2,18 +2,20 @@
   --size: 10vw;
 }
 .App {
+  margin: 0;
   text-align: center;
 }
-.Heading{
-  height: fit-content;
-  background-color: #282c34;
-  padding-top: calc(var(--size) * .8);
-  padding-bottom: calc(var(--size) * 1);
-}
+
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  margin: 0;
+  height: fit-content;
+  background-color: #282c34;
+  padding-top: calc(var(--size) * .8);
+  padding-bottom: calc(var(--size) * 1.5);
 }
 
 .logo {
@@ -27,10 +29,10 @@
   text-align: left;
   font-size:calc(var(--size) * 0.75);
   color: rgb(255, 177, 177);
-  font-weight: bold;
 }
 
 #hi-text {
+  font-weight: bold;
   display: block; 
 }
 
