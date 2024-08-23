@@ -1,36 +1,42 @@
+:root {
+  --size: 10vw;
+}
 .App {
   text-align: center;
-  background-color: #282c34;
 }
-
+.Heading{
+  height: fit-content;
+  background-color: #282c34;
+  padding-top: calc(var(--size) * .8);
+  padding-bottom: calc(var(--size) * 1);
+}
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height */
 }
 
 .logo {
-  width: 100px; /* Adjust the size as needed */
-  height: 100px; /* Adjust the size as needed */
-  margin-right: 20px; /* Space between image and text */
+  width: 100px;
+  height: 100px;
+  margin-right: calc(var(--size) * 0.5);
 }
 
 .text {
   align-items: center;
   text-align: left;
-  font-size: 75px;
+  font-size:calc(var(--size) * 0.75);
   color: rgb(255, 177, 177);
   font-weight: bold;
 }
 
 #hi-text {
-  display: block; /* Ensures "Hi" is on its own line */
+  display: block; 
 }
 
 #im-text,
 #name-text {
-  display: inline-block; /* Keeps "I'm," and "Matthew Tran" on the same line */
+  display: inline-block;
 }
 #name-text {
   color: whitesmoke;
