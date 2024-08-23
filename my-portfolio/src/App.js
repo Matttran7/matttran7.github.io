@@ -8,7 +8,9 @@ function App() {
       <div className="container">
         <img src={logo} alt="logo" className="logo" />
         <div className="text">
-          <h1>Matthew Tran</h1>
+          <div id='hi-text'>Hi </div>
+          <div id='im-text'>I'm&nbsp;</div>
+          <div id='name-text'>Matthew Tran</div>
         </div>
       </div>
     </div>

@@ -17,6 +17,21 @@
 }
 
 .text {
-  display: flex;
   align-items: center;
+  text-align: left;
+  font-size: 75px;
+  color: rgb(255, 177, 177);
+  font-weight: bold;
+}
+
+#hi-text {
+  display: block; /* Ensures "Hi" is on its own line */
+}
+
+#im-text,
+#name-text {
+  display: inline-block; /* Keeps "I'm," and "Matthew Tran" on the same line */
+}
+#name-text {
+  color: whitesmoke;
 }
