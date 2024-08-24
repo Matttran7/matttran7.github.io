@@ -138,12 +138,9 @@ time {
 
 /*  TEXT  */
 .Title-card {
-    padding-bottom: 35px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
-}
-.description-card{
-    font-size: 15px;
+    padding: 0%;
 }
 .company-card{
     font-size: 13px;
