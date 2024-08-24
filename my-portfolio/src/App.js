@@ -5,20 +5,15 @@ import Timeline from './Components/Timeline';
 const fonts = [
   'Arial, sans-serif',
   'Times New Roman, serif',
-  'Courier New, monospace',
   'Georgia, serif',
-  'Impact, sans-serif',
   'Brush Script MT, cursive',
   'Copperplate, fantasy',
   'Palatino, serif',
-  'Lucida Console, monospace',
   'Trebuchet MS, sans-serif',
   'Garamond, serif',
-  'Verdana, sans-serif',
   'Rockwell, serif',
   'Futura, sans-serif'
 ];
-
 function App() {
   const [currentFontIndex, setCurrentFontIndex] = useState(0);
   const [flip, setFlip] = useState(false);
@@ -49,7 +44,7 @@ function App() {
   useEffect(() => {
     const timer = setInterval(() => {
       handleFlip();
-    }, 3000);
+    }, 4000);
 
     return () => {
       clearInterval(timer);
