@@ -49,7 +49,7 @@ function App() {
   useEffect(() => {
     const timer = setInterval(() => {
       handleFlip();
-    }, 5000);
+    }, 3000);
 
     return () => {
       clearInterval(timer);
