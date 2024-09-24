@@ -1,22 +1,21 @@
 :root {
   --size: 10vw;
 }
-
 .App {
   margin: 0;
-  text-align: left;
+  text-align: center;
 }
 
-.header {
-  background-color: #282c34;
-  padding: calc(var(--size) * .8) 5% calc(var(--size) * 1.5);
-}
-
-.header-content {
+.container {
   display: flex;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: center;
+
+  margin: 0;
+  height: fit-content;
+  background-color: #282c34;
+  padding-top: calc(var(--size) * .8);
+  padding-bottom: calc(var(--size) * 1.5);
 }
 
 .logo {
@@ -26,50 +25,21 @@
 }
 
 .text {
-  position: relative;
-  font-size: calc(var(--size) * 0.75);
+  align-items: center;
+  text-align: left;
+  font-size:calc(var(--size) * 0.75);
   color: rgb(255, 177, 177);
 }
 
 #hi-text {
   font-weight: bold;
-  display: block;
+  display: block; 
 }
 
-.name-container {
-  display: flex;
-  align-items: baseline;
-}
-
-#im-text {
-  display: inline-block;
-}
-
-.name-flip {
-  position: relative;
-  display: inline-block;
-  height: 1em;
-}
-
-#name-text,
-#name-text2 {
-  position: absolute;
-  left: 0;
-  white-space: nowrap;
-  color: whitesmoke;
-}
-
-#name-text.transitioning,
-#name-text2.transitioning {
-  transition: transform 0.75s ease;
-}
-
+#im-text,
 #name-text {
-  transform-origin: top;
-  top: 0.1em;
+  display: inline-block;
 }
-
-#name-text2 {
-  transform-origin: bottom;
-  top: 0.1em;
+#name-text {
+  color: whitesmoke;
 }

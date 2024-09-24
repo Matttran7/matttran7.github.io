@@ -51,6 +51,7 @@ function Timeline() {
           <li key={index} ref={el => itemsRef.current[index] = el || ""}>
             <div className="content">
               <h2 className='Title-card'>{event[0]}</h2> {/* Title */}
+              {event[2] && <p className='description-card'>{event[2]}</p>}
             </div>
             <div className="time">
               {event[1] && <p className='company-card'>{event[1]}</p>}
