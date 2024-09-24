@@ -57,6 +57,18 @@ const HexagonGrid = () => {
             <li className="pusher"></li>
             <li className="pusher"></li>
             <li><div className='hex'></div></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li><div className='hex'></div></li>
         </ul>
         </div>
         {/** ========================
@@ -113,6 +125,25 @@ const HexagonGrid = () => {
             <li className="pusher"></li>
             <li className="pusher"></li>
             <li><div className='hex'></div></li>
+            <li><div className='hex'></div></li>
+            <li className="pusher"></li>
+            <li><div className='hex'></div></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li><div className='hex'></div></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li><div className='hex'></div></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li><div className='hex'></div></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li><div className='hex'></div></li>
+
         </ul>
         </div>
      </div>
