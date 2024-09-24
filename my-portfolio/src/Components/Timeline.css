@@ -11,7 +11,7 @@ a {
 }
 
 body {
-  background: #24222c;
+  background: #13151a;
   color: #fff;
   overflow-x: hidden;
   padding-bottom: 50px;
@@ -20,7 +20,7 @@ body {
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline ul {
-  background: #24222c;
+  background: #13151a;
   padding: 150px 0;
 }
 
@@ -32,7 +32,9 @@ body {
   margin: 0 auto;
   padding-top: 40px;
   background: #fff;
+  cursor: pointer;
 }
+
 /** Dot */
 .timeline ul li::after {
   content: "";
@@ -53,19 +55,23 @@ body {
   width: 400px;
   padding: 35px;
   background: #06060b50;
+  transition: all 0.3s ease;
 }
-.content{
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-  }
-.time{
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+
+.content {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.time {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .timeline ul li:nth-child(odd) div {
   left: 45px;
 }
+
 .timeline ul li:nth-child(even) div {
   left: -439px;
 }
@@ -76,7 +82,6 @@ time {
   font-weight: bold;
   margin-bottom: 8px;
 }
-
 
 /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -105,17 +110,73 @@ time {
   opacity: 1;
 }
 
+/* Pop-up styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #06060b;
+  padding: 40px;
+  border-radius: 4px;
+  width: 70%;
+  height: 70%;
+  min-width: 50%;
+  min-height: 50%;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  transform: scale(0.7);
+  opacity: 0;
+  transition: all 0.3s ease;
+  animation: popIn 0.3s ease forwards;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.popup-overlay.closing .popup-content {
+  animation: popOut 0.3s ease forwards;
+}
+
+@keyframes popOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+}
 
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 @media screen and (max-width: 900px) {
   .timeline ul li div {
     width: 250px;
   }
   .timeline ul li:nth-child(even) div {
     left: -289px;
-    /*250+45-6*/
   }
 }
 
@@ -136,22 +197,25 @@ time {
   }
 }
 
-/*  TEXT  */
+/* TEXT */
 .Title-card {
-    padding-bottom: 35px;
-    font-size: 24px;
-    font-weight: bold;
+  padding-bottom: 35px;
+  font-size: 24px;
+  font-weight: bold;
 }
-.description-card{
-    font-size: 15px;
+
+.description-card {
+  font-size: 15px;
 }
-.company-card{
-    font-size: 13px;
-    font-weight: lighter;
-    color: #9f9f9f;
+
+.company-card {
+  font-size: 13px;
+  font-weight: lighter;
+  color: #9f9f9f;
 }
-.date-card{
-    font-size: 12px;
-    font-weight: lighter;
-    color: #9f9f9f;
+
+.date-card {
+  font-size: 12px;
+  font-weight: lighter;
+  color: #9f9f9f;
 }
