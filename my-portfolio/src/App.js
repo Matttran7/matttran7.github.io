@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Timeline from './Components/Timeline';
 import HexagonGrid from './Components/Hexgons/HexagonGrid';
-
+import MiddleHeader from './Components/MiddleHeader/MiddleHeader';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
             <div id='name-text'>Matthew Tran</div>
           </div>
       </div>
-
+      <MiddleHeader />
       <div className='Timeline-body'>
         <Timeline/>
       </div>

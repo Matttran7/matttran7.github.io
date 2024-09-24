@@ -13,7 +13,7 @@
   justify-content: center;
 
   margin: 0;
-  height: fit-content;
+  height: 100vh;
   background-color: #13151a;
   padding-top: calc(var(--size) * 1.5);
   padding-bottom: calc(var(--size) * 1.5);
@@ -29,7 +29,7 @@
   align-items: center;
   text-align: left;
   font-size:calc(var(--size) * 0.85);
-  color: #f4b841;
+  color: #edc474;
 }
 
 #hi-text {
