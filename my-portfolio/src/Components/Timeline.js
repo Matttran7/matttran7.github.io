@@ -43,6 +43,7 @@ function Timeline() {
     ["Machine Learning Researcher", "University of Portland", "Developed an AI system for constructing agents that emulate natural animal behavior", "Fall 2023"],
     ["Tektronix AR HoloLens", "Tektronix", "Developed an augmented reality data visualization tool to display electromagnetic waves", "Fall 2023"],
     ["Project Finder", null, null, "Present"],
+    ["Software Engineer I", "Framatome", null, "Present"],
   ];
 
   const handleCardClick = (event) => {
