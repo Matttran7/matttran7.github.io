@@ -19,12 +19,6 @@ const HexagonGrid = () => {
             <li className="pusher"></li>
             <li><div className='hex'></div></li>
             <li className="pusher"></li>
-            <li><div className='hex'></div></li>
-            <li><div className='hex'></div></li>
-            <li className="pusher"></li>
-            <li className="pusher"></li>
-            <li><div className='hex'></div></li>
-            <li className="pusher"></li>
             <li className="pusher"></li>
             <li><div className='hex'></div></li>
             <li className="pusher"></li>
@@ -33,6 +27,9 @@ const HexagonGrid = () => {
             <li className="pusher"></li>
             <li className="pusher"></li>
             <li><div className='hex'></div></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
             <li className="pusher"></li>
             <li className="pusher"></li>
             <li><div className='hex'></div></li>
@@ -46,7 +43,10 @@ const HexagonGrid = () => {
             <li className="pusher"></li>
             <li><div className='hex'></div></li>
             <li className="pusher"></li>
+            <li className="pusher"></li>
             <li><div className='hex'></div></li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
             <li><div className='hex'></div></li>
             <li className="pusher"></li>
             <li><div className='hex'></div></li>
@@ -121,11 +121,11 @@ const HexagonGrid = () => {
             <li><div className='hex'></div></li>
             <li className="pusher"></li>
             <li className="pusher"></li>
-            <li><div className='hex'></div></li>
             <li className="pusher"></li>
             <li className="pusher"></li>
+            <li className="pusher"></li>
             <li><div className='hex'></div></li>
-            <li><div className='hex'></div></li>
+            <li className="pusher"></li>
             <li className="pusher"></li>
             <li><div className='hex'></div></li>
             <li className="pusher"></li>
