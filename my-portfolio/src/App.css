@@ -1,3 +1,4 @@
+
 :root {
   --size: 10vw;
 }
@@ -27,7 +28,7 @@
 .text {
   align-items: center;
   text-align: left;
-  font-size:calc(var(--size) * 0.75);
+  font-size:calc(var(--size) * 0.85);
   color: #f4b841;
 }
 
@@ -42,4 +43,5 @@
 }
 #name-text {
   color: whitesmoke;
+  
 }
