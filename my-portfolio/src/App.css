@@ -20,6 +20,8 @@
   background-color: #13151a;
   padding: 2rem 1rem; /* Adjust padding for mobile */
   box-sizing: border-box; /* Include padding in width calculation */
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .logo {
