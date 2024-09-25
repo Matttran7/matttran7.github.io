@@ -5,7 +5,7 @@ const useIsMobile = () => {
 
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth <= 568); 
+      setIsMobile(window.innerWidth <= 768); 
     };
 
     checkIfMobile();

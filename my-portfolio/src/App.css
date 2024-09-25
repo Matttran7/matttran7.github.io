@@ -1,47 +1,77 @@
-
 :root {
   --size: 10vw;
 }
+
 .App {
   margin: 0;
   text-align: center;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .container {
   display: flex;
+  flex-direction: column; /* Stack items vertically on mobile */
   align-items: center;
   justify-content: center;
-
   margin: 0;
-  height: 100vh;
+  min-height: 100vh; /* Use min-height instead of height */
+  width: 100%; /* Ensure full width */
   background-color: #13151a;
-  padding-top: calc(var(--size) * 1.5);
-  padding-bottom: calc(var(--size) * 1.5);
+  padding: 2rem 1rem; /* Adjust padding for mobile */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .logo {
   width: 100px;
   height: 100px;
-  margin-right: calc(var(--size) * 0.5);
+  margin-bottom: 1rem; /* Add space below logo on mobile */
 }
 
 .text {
   align-items: center;
-  text-align: left;
-  font-size:calc(var(--size) * 0.85);
+  text-align: center; /* Center text on mobile */
+  font-size: calc(var(--size) * 0.85);
   color: #edc474;
+  width: 100%; /* Ensure full width */
 }
 
 #hi-text {
   font-weight: bold;
-  display: block; 
+  display: block;
 }
 
 #im-text,
 #name-text {
   display: inline-block;
 }
+
 #name-text {
   color: whitesmoke;
-  
+}
+
+/* Media query for larger screens */
+@media (min-width: 769px) {
+  .container {
+    flex-direction: row; /* Revert to horizontal layout on larger screens */
+    padding-top: calc(var(--size) * 1.5);
+    padding-bottom: calc(var(--size) * 1.5);
+    height: 100vh; /* Maintain full height on larger screens */
+  }
+
+  .logo {
+    margin-right: calc(var(--size) * 0.5);
+    margin-bottom: 0; /* Remove bottom margin on larger screens */
+  }
+
+  .text {
+    text-align: left; /* Align text to the left on larger screens */
+  }
+}
+
+/* Adjust font size for mobile */
+@media (max-width: 768px) {
+  :root {
+    --size: 7vw; /* Smaller font size on mobile */
+  }
 }
