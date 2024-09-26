@@ -1,3 +1,4 @@
+/* Timeline.css */
 *,
 *::before,
 *::after {
@@ -110,107 +111,27 @@ time {
   opacity: 1;
 }
 
-/* Pop-up styles */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+/* TEXT */
+.Title-card {
+  padding-bottom: 0px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.popup-content {
-  background: #06060b;
-  padding: 40px;
-  border-radius: 4px;
-  width: 70%;
-  height: 70%;
-  min-width: 50%;
-  min-height: 50%;
-  max-width: 90%;
-  max-height: 90%;
-  overflow-y: auto;
-  transform: scale(0.7);
-  opacity: 0;
-  transition: all 0.3s ease;
-  animation: popIn 0.3s ease forwards;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+.description-card {
+  font-size: 15px;
 }
 
-.popup-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
+.company-card {
+  font-size: 13px;
+  font-weight: lighter;
+  color: #9f9f9f;
 }
 
-/* Corner border styles */
-.popup-content::before,
-.popup-content::after,
-.popup-inner::before,
-.popup-inner::after {
-  content: '';
-  position: absolute;
-  width: 5%;
-  height: 5%;
-  border-color: #f1a406;
-  border-style: solid;
-}
-
-.popup-content::before {
-  top: 0;
-  left: 0;
-  border-width: 2px 0 0 2px;
-}
-
-.popup-content::after {
-  top: 0;
-  right: 0;
-  border-width: 2px 2px 0 0;
-}
-
-.popup-inner::before {
-  bottom: 0;
-  left: 0;
-  border-width: 0 0 2px 2px;
-}
-
-.popup-inner::after {
-  bottom: 0;
-  right: 0;
-  border-width: 0 2px 2px 0;
-}
-
-@keyframes popIn {
-  0% {
-    transform: scale(0.7);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.popup-overlay.closing .popup-content {
-  animation: popOut 0.3s ease forwards;
-}
-
-@keyframes popOut {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0.7);
-    opacity: 0;
-  }
+.date-card {
+  font-size: 12px;
+  font-weight: lighter;
+  color: #9f9f9f;
 }
 
 /* GENERAL MEDIA QUERIES
@@ -239,27 +160,4 @@ time {
     border-width: 8px 16px 8px 0;
     border-color: transparent #ffffff transparent transparent;
   }
-}
-
-/* TEXT */
-.Title-card {
-  padding-bottom: 0px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.description-card {
-  font-size: 15px;
-}
-
-.company-card {
-  font-size: 13px;
-  font-weight: lighter;
-  color: #9f9f9f;
-}
-
-.date-card {
-  font-size: 12px;
-  font-weight: lighter;
-  color: #9f9f9f;
 }

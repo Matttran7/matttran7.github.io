@@ -10,6 +10,7 @@ const MiddleHeader = () => {
         {!isMobile &&
       <div className={styles.text}>
         <div className={styles.titleText}>Software Engineer</div>
+        <div className={styles.emailText}>matthewatran7@gmail.com</div>
       </div>
       }
       {isMobile &&

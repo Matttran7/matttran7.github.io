@@ -1,9 +1,12 @@
+// Timeline.js
 import React, { useEffect, useRef, useState } from 'react';
+import Popup from './popup/Popup';
 import './Timeline.css';
 
 function Timeline() {
   const itemsRef = useRef([]);
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const [popupPage, setPopupPage] = useState(1);
 
   useEffect(() => {
     const items = itemsRef.current;
@@ -48,12 +51,19 @@ function Timeline() {
 
   const handleCardClick = (event) => {
     setSelectedEvent(event);
+    setPopupPage(1);
   };
 
-  const handlePopupClose = (e) => {
-    if (e.target.classList.contains('popup-overlay')) {
-      setSelectedEvent(null);
-    }
+  const handlePopupClose = () => {
+    setSelectedEvent(null);
+  };
+
+  const handleNextPage = () => {
+    setPopupPage(2);
+  };
+
+  const handlePrevPage = () => {
+    setPopupPage(1);
   };
 
   return (
@@ -73,19 +83,17 @@ function Timeline() {
         <div style={{ clear: 'both' }}></div>
       </ul>
       {selectedEvent && (
-        <div className="popup-overlay" onClick={handlePopupClose}>
-          <div className="popup-content">
-            <div className="popup-inner">
-              <h2 className='Title-card'>{selectedEvent[0]}</h2>
-              {selectedEvent[2] && <p className='description-card'>{selectedEvent[2]}</p>}
-              {selectedEvent[1] && <p className='company-card'>{selectedEvent[1]}</p>}
-              {selectedEvent[3] && <p className='date-card'>{selectedEvent[3]}</p>}
-            </div>
-          </div>
-        </div>
+        <Popup
+          event={selectedEvent}
+          onClose={handlePopupClose}
+          page={popupPage}
+          onNextPage={handleNextPage}
+          onPrevPage={handlePrevPage}
+        />
       )}
     </div>
   );
 }
 
 export default Timeline;
+
