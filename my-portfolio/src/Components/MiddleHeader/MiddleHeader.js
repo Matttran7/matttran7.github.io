@@ -1,12 +1,22 @@
 import React from 'react';
 import styles from './MiddleHeader.module.css';
+import useIsMobile from '../../hooks/useIsMobile';
 
 const MiddleHeader = () => {
+  const isMobile = useIsMobile(); 
+
   return (
     <div className={styles.profileInfo}>
+        {!isMobile &&
       <div className={styles.text}>
         <div className={styles.titleText}>Software Engineer</div>
       </div>
+      }
+      {isMobile &&
+      <div className={styles.text}>
+        <div className={styles.titleText}>matthewatran7@gmail.com</div>
+      </div>
+      }
       <div className={styles.socialLinks}>
         <a href="https://www.linkedin.com/in/mtran7" target="_blank" rel="noopener noreferrer">
           <img src={require('./LinkedInLogo.png')} alt="LinkedIn" className={styles.socialIcon} />
