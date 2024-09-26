@@ -40,13 +40,14 @@ function Timeline() {
     };
   }, []);
 
+   // [ TITLE , COMPANY , DESCRIPTION, DATE, IMAGE]
   const EventList = [
-    ["Computer Science Grader", "University of Portland", "Graded and tutored for 'Analysis of Algorithms' & 'Intro to Computer Science'", "August 2022"],
+    ["Computer Science Grader", "University of Portland", "Graded and tutored for 'Analysis of Algorithms' & 'Intro to Computer Science'", "August 2022",`${process.env.PUBLIC_URL}/images/mlogo.png`],
     ["Shogi", null, "Developer for a mobile game 'Shogi'", "Fall 2022"],
     ["Machine Learning Researcher", "University of Portland", "Developed an AI system for constructing agents that emulate natural animal behavior", "Fall 2023"],
     ["Tektronix AR HoloLens", "Tektronix", "Developed an augmented reality data visualization tool to display electromagnetic waves", "Fall 2023"],
     ["Project Finder", null, null, "Present"],
-    ["Software Engineer I", "Framatome", null, "Present"],
+    ["Software Engineer I", "Framatome", "null", "Present", `${process.env.PUBLIC_URL}/images/framatome.jpg`],
   ];
 
   const handleCardClick = (event) => {

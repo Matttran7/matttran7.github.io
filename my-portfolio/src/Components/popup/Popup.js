@@ -10,6 +10,7 @@ function Popup({ event, onClose, page, onNextPage, onPrevPage }) {
             <h2 className='Title-card'>{event[0]}</h2>
             {page === 1 ? (
               <>
+                {event[4] && <img src={event[4]} alt={"Error Loading Image..."} className="popup-image" />}
                 {event[1] && <p className='company-card'>{event[1]}</p>}
                 {event[3] && <p className='date-card'>{event[3]}</p>}
               </>
