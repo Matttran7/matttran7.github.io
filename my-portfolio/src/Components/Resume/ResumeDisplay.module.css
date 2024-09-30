@@ -1,0 +1,50 @@
+.resumeContainer {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+  height: 100vh; 
+  padding: 0;
+  position: relative; 
+}
+
+.resumeImage {
+  max-height: 90vh; 
+  max-width: 100%; 
+  object-fit: contain; 
+}
+
+.backButton {
+  position: absolute; 
+  top: 20px;
+  left: 20px; 
+  background-color: #f1a406; 
+  color: white; 
+  padding: 10px 15px;
+  text-decoration: none; 
+  border-radius: 2px;
+  transition: .3s ease;
+}
+.backButton:hover {
+  color: #edc474;
+  background-color: transparent;
+}
+.downloadButton {
+  margin-top: 20px;
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px; 
+  text-decoration: none; 
+  border-radius: 2px; 
+  transition: .3s ease;
+  text-decoration: underline;
+}
+.downloadButton:hover {
+  color: #edc474;
+}
+body {
+  background: #13151a;
+  color: #fff;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  padding-bottom: 50px; /* Keep padding as per your requirement */
+}
