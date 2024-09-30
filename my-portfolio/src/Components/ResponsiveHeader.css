@@ -1,0 +1,84 @@
+/* ResponsiveHeader.css */
+:root {
+    --max-content-width: 1800px;
+    --min-font-size: 24px; 
+    --max-font-size: 150px; 
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #13151a;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: var(--max-content-width);
+    width: 100%;
+  }
+  
+  .logo {
+    width: 40%; /* Increased from 30% */
+    max-width: 500px; /* Increased from 300px */
+    height: auto;
+    margin-right: 2rem;
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #edc474;
+    font-size: clamp(var(--min-font-size), 6vw, var(--max-font-size)); /* Increased from 5vw */
+  }
+  
+  #hi-text {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  #im-name-text {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #name-text {
+    color: whitesmoke;
+  }
+  
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .logo {
+      width: 80%; /* Increased from 60% */
+      max-width: 300px; /* Increased from 200px */
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  
+    .text {
+      align-items: center;
+    }
+  }
+  
+  /* New media query for very large screens */
+  @media (min-width: 1600px) {
+    :root {
+      --max-font-size: 96px; /* Even larger font size for very large screens */
+    }
+  
+    .logo {
+      max-width: 500px; /* Larger logo for very large screens */
+    }
+  }
