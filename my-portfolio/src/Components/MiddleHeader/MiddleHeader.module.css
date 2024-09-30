@@ -21,6 +21,7 @@
 }
 
 .titleText {
+  font-weight: bold;
   font-size: calc(var(--size) * 0.35);
   color: #edc474;
 }

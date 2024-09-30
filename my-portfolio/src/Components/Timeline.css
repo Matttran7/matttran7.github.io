@@ -45,7 +45,7 @@ body {
   transform: translateX(-50%);
   width: 8px;
   height: 8px;
-  border-radius: 20%;
+  border-radius: 5%;
   background: inherit;
   z-index: 1;
 }
@@ -88,7 +88,8 @@ time {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /** Line dot */
 .timeline ul li.in-view::after {
-  background: #ffffff;
+  background: #edc474;
+  transform: translateX(-50%) rotate(45deg);
 }
 
 .timeline ul li div {
