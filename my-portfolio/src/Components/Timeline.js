@@ -1,9 +1,12 @@
 // Timeline.js
 import React, { useEffect, useRef, useState } from 'react';
 import Popup from './popup/Popup';
+import useIsMobile from '../hooks/useIsMobile';
 import './Timeline.css';
 
 function Timeline() {
+  const isMobile = useIsMobile();
+
   const itemsRef = useRef([]);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [popupPage, setPopupPage] = useState(1);
@@ -70,6 +73,11 @@ function Timeline() {
   return (
     <div className="timeline">
       <ul>
+      {isMobile && (
+      <div className="ClickMe">
+        click to expand
+      </div>
+      )}
         {EventList.map((event, index) => (
           <li key={index} ref={el => itemsRef.current[index] = el || ""} onClick={() => handleCardClick(event)}>
             <div className="content">

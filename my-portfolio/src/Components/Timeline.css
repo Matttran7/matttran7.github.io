@@ -1,4 +1,7 @@
-/* Timeline.css */
+:root {
+  --size: 10vw;
+}
+
 *,
 *::before,
 *::after {
@@ -82,6 +85,15 @@ time {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 8px;
+}
+.ClickMe{
+    position: relative;
+    left: 0; 
+    width: 100%;
+    text-align: center; 
+    padding: 10px;
+    font-size: calc(var(--size) * 0.275);
+    color: #585e75;
 }
 
 /* EFFECTS
