@@ -27,7 +27,7 @@
   
   .logo {
     width: 40%; /* Increased from 30% */
-    max-width: 500px; /* Increased from 300px */
+    max-width: 400px; /* Increased from 300px */
     height: auto;
     margin-right: 2rem;
   }

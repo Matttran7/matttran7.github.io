@@ -20,7 +20,7 @@ const ResponsiveHeader = () => {
       {!isMobile && <HexagonGrid />}
       <div className="content-wrapper">
         <img
-          src={`${process.env.PUBLIC_URL}/images/matttran_lowpoly.png`}
+          src={`${process.env.PUBLIC_URL}/images/matttran_poly.png`}
           alt="Matthew Tran"
           className="logo"
         />
