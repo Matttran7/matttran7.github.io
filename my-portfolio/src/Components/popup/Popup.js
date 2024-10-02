@@ -1,6 +1,6 @@
 import React from 'react';
 import './Popup.css';
-import HexagonGrid from '../Hexgons/HexagonGrid';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Popup({ event, onClose, page, onNextPage, onPrevPage }) {
   return (
@@ -11,17 +11,26 @@ function Popup({ event, onClose, page, onNextPage, onPrevPage }) {
             <h2 className='Title-card'>{event[0]}</h2>
             {page === 1 ? (
               <>
-                <div className="image-container">
-                  {event[4] && <img src={event[4]} alt={"Error Loading Image..."} className="popup-image" />}
-                </div>
-                <div className="info-container">
-                  {event[1] && <p className='company-card'>{event[1]}</p>}
-                  {event[3] && <p className='date-card'>{event[3]}</p>}
+                {event[2] && <p className='description-card'>{event[2]}</p>}
+                <div className="popup-footer">
+                  {event[5] && event[5].length > 0 && (
+                    <div className="language-icons">
+                      {event[5].map((icon, index) => (
+                        <FontAwesomeIcon key={index} icon={icon} className="icon" />
+                      ))}
+                    </div>
+                  )}
+                  <div className="info-container">
+                    {event[1] && <p className='company-card'>{event[1]}</p>}
+                    {event[3] && <p className='date-card'>{event[3]}</p>}
+                  </div>
                 </div>
               </>
             ) : (
               <>
-                {event[2] && <p className='description-card'>{event[2]}</p>}
+                <div className="image-container">
+                  {event[4] && <img src={event[4]} alt={"Error Loading Image..."} className="popup-image" />}
+                </div>
               </>
             )}
           </div>

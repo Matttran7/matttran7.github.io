@@ -1,19 +1,17 @@
-// Timeline.js
 import React, { useEffect, useRef, useState } from 'react';
 import Popup from './popup/Popup';
 import useIsMobile from '../hooks/useIsMobile';
 import './Timeline.css';
-
+import { faJava, faPython, faAndroid, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faHashtag } from '@fortawesome/free-solid-svg-icons';
 function Timeline() {
   const isMobile = useIsMobile();
-
   const itemsRef = useRef([]);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [popupPage, setPopupPage] = useState(1);
 
   useEffect(() => {
     const items = itemsRef.current;
-
     function isElementInViewport(el) {
       const rect = el.getBoundingClientRect();
       return (
@@ -23,7 +21,6 @@ function Timeline() {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
     }
-
     function callbackFunc() {
       items.forEach(item => {
         if (isElementInViewport(item)) {
@@ -31,11 +28,9 @@ function Timeline() {
         }
       });
     }
-
     window.addEventListener('load', callbackFunc);
     window.addEventListener('resize', callbackFunc);
     window.addEventListener('scroll', callbackFunc);
-
     return () => {
       window.removeEventListener('load', callbackFunc);
       window.removeEventListener('resize', callbackFunc);
@@ -43,14 +38,14 @@ function Timeline() {
     };
   }, []);
 
-   // [ TITLE , COMPANY , DESCRIPTION, DATE, IMAGE]
+  // [ TITLE , COMPANY , DESCRIPTION, DATE, IMAGE, ICONS]
   const EventList = [
-    ["Computer Science Grader", "University of Portland", "Graded and tutored for 'Analysis of Algorithms' & 'Intro to Computer Science'", "August 2022",`${process.env.PUBLIC_URL}/images/mlogo.png`],
-    ["Shogi", null, "Developer for a mobile game 'Shogi'", "Fall 2022"],
-    ["Machine Learning Researcher", "University of Portland", "Developed an AI system for constructing agents that emulate natural animal behavior", "Fall 2023"],
-    ["Tektronix AR HoloLens", "Tektronix", "Developed an augmented reality data visualization tool to display electromagnetic waves", "Fall 2023"],
-    ["Project Finder", null, null, "Present"],
-    ["Software Engineer I", "Framatome", "null", "Present", `${process.env.PUBLIC_URL}/images/framatome.jpg`],
+    ["Computer Science Grader", "University of Portland", "Graded and tutored for 'Analysis of Algorithms' & 'Intro to Computer Science'", "August 2022", null, [faJava]],
+    ["Shogi", null, "Developer for a mobile game 'Shogi'", "Fall 2022", null, [faAndroid, faJava]],
+    ["Machine Learning Researcher", "University of Portland", "Developed an AI system for constructing agents that emulate natural animal behavior", "Fall 2023", `${process.env.PUBLIC_URL}/images/mlresearch.png`, [faHashtag, faPython, faDatabase]],
+    ["Tektronix AR HoloLens", "Tektronix", "Developed an augmented reality data visualization tool to display electromagnetic waves", "Fall 2023", null, [faPython, faDatabase]],
+    ["Project Finder", null, null, "Present", null, [faReact, faNodeJs, faDatabase]],
+    ["Software Engineer I", "Framatome", "null", "Present", `${process.env.PUBLIC_URL}/images/framatome.jpg`, [faHashtag, faPython]],
   ];
 
   const handleCardClick = (event) => {
@@ -73,11 +68,11 @@ function Timeline() {
   return (
     <div className="timeline">
       <ul>
-      {isMobile && (
-      <div className="ClickMe">
-        click to expand
-      </div>
-      )}
+        {isMobile && (
+          <div className="ClickMe">
+            click to expand
+          </div>
+        )}
         {EventList.map((event, index) => (
           <li key={index} ref={el => itemsRef.current[index] = el || ""} onClick={() => handleCardClick(event)}>
             <div className="content">
@@ -105,4 +100,3 @@ function Timeline() {
 }
 
 export default Timeline;
-
