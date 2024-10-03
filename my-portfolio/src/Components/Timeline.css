@@ -199,6 +199,6 @@ time {
     border-color: transparent #ffffff transparent transparent;
   }
   .Title-card{
-    font-size: clamp(24px,calc(24px + 8vw),60px);
+    font-size: clamp(24px,calc(24px + 8vw),50px);
   }
 }
