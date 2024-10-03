@@ -41,9 +41,9 @@ function Timeline() {
   // [ TITLE , COMPANY , DESCRIPTION, DATE, IMAGE, ICONS]
   const EventList = [
     ["Computer Science Grader", "University of Portland", "Graded and tutored for 'Analysis of Algorithms' & 'Intro to Computer Science'", "August 2022", null, [faJava]],
-    ["Shogi", null, "Developer for a mobile game 'Shogi'", "Fall 2022", null, [faAndroid, faJava]],
+    ["Shogi (Game)", null, "Developer for a mobile game 'Shogi'", "Fall 2022", null, [faAndroid, faJava]],
     ["Machine Learning Researcher", "University of Portland", "Developed an AI system for constructing agents that emulate natural animal behavior", "Fall 2023", `${process.env.PUBLIC_URL}/images/mlresearch.png`, [faHashtag, faPython, faDatabase]],
-    ["Tektronix AR HoloLens", "Tektronix", "Developed an augmented reality data visualization tool to display electromagnetic waves", "Fall 2023", null, [faPython, faDatabase]],
+    ["AR HoloLens", "Tektronix", "Developed an augmented reality data visualization tool to display electromagnetic waves", "Fall 2023", null, [faPython, faDatabase]],
     ["Project Finder", null, null, "Present", null, [faReact, faNodeJs, faDatabase]],
     ["Software Engineer I", "Framatome", "null", "Present", `${process.env.PUBLIC_URL}/images/framatome.jpg`, [faHashtag, faPython]],
   ];
@@ -77,10 +77,6 @@ function Timeline() {
           <li key={index} ref={el => itemsRef.current[index] = el || ""} onClick={() => handleCardClick(event)}>
             <div className="content">
               <h2 className='Title-card'>{event[0]}</h2>
-            </div>
-            <div className="time">
-              {event[1] && <p className='company-card'>{event[1]}</p>}
-              {event[3] && <p className='date-card'>{event[3]}</p>}
             </div>
           </li>
         ))}

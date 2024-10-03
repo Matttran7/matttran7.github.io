@@ -54,12 +54,25 @@ body {
 }
 
 .timeline ul li div {
+  z-index: 10;
   position: relative;
   bottom: 0;
-  width: 400px;
+  width: fit-content;
   padding: 35px;
-  background: #06060b50;
   transition: all 0.3s ease;
+  background: #06060b50;
+  border: 1px solid #fcad26;
+  border-bottom: 1px solid #fcad26;
+  box-shadow: 0 3px #fcae2692;
+  border-radius: 7px;
+}
+.timeline ul li div:hover {
+  top: 3px;
+  box-shadow: 0 3px #fcae2692; 
+}
+.timeline ul li div:active {
+  top: 6px;
+  box-shadow: inset 0 0 0 #df9517;
 }
 
 .content {
@@ -74,10 +87,12 @@ body {
 
 .timeline ul li:nth-child(odd) div {
   left: 45px;
+  text-align: left;
 }
 
 .timeline ul li:nth-child(even) div {
-  left: -439px;
+  left: -479px;
+  text-align: right;
 }
 
 time {
@@ -128,7 +143,7 @@ time {
 .Title-card {
   color: #edc474;
   padding-bottom: 0px;
-  font-size: 24px;
+  font-size: clamp(50px,calc(50px + 3vw),80px);
   font-weight: bold;
 }
 
@@ -150,28 +165,40 @@ time {
 
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   .timeline ul li div {
     width: 250px;
   }
   .timeline ul li:nth-child(even) div {
     left: -289px;
   }
+  .Title-card {
+    font-size: clamp(20px,calc(20px + 3vw),80px);
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .timeline ul li {
     margin-left: 20px;
   }
+  /*====================================*/
   .timeline ul li div {
     width: calc(100vw - 91px);
   }
+  /*====================================*/
   .timeline ul li:nth-child(even) div {
+    left: 45px;
+    text-align: left;
+  }
+  .timeline ul li:nth-child(odd) div {
     left: 45px;
   }
   .timeline ul li:nth-child(even) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
     border-color: transparent #ffffff transparent transparent;
+  }
+  .Title-card{
+    font-size: clamp(24px,calc(24px + 8vw),60px);
   }
 }

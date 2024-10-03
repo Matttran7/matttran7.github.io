@@ -22,13 +22,13 @@
 
 .titleText {
   font-weight: bold;
-  font-size: calc(var(--size) * 0.35);
-  color: #edc474;
+  font-size: calc(var(--size) * 0.3);
+  color: #585e75;
 }
 
 .emailText {
   font-size: calc(var(--size) * 0.085);
-  color: #ead2a3;
+  color: #424657;
   margin-top: 0.5rem;
   transition: .3s ease;
   cursor: pointer;

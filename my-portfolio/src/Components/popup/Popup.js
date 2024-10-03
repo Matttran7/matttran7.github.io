@@ -8,7 +8,7 @@ function Popup({ event, onClose, page, onNextPage, onPrevPage }) {
       <div className="popup-content" onClick={(e) => e.stopPropagation()}>
         <div className="popup-inner">
           <div className="page-content">
-            <h2 className='Title-card'>{event[0]}</h2>
+            <h2 className='pop-Title-card'>{event[0]}</h2>
             {page === 1 ? (
               <>
                 {event[2] && <p className='description-card'>{event[2]}</p>}
