@@ -13,7 +13,7 @@
 }
 
 .popup-content {
-  background: #06060b;
+  background: #0F1015;
   padding: 40px;
   border-radius: 4px;
   width: 70%;
@@ -51,11 +51,18 @@
 }
 
 .image-container {
-  flex-grow: 1;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 20px 0;
+  align-items: flex-start;
+  max-height: 60%;
+  overflow: hidden;
+}
+
+.popup-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .popup-footer {
@@ -157,6 +164,7 @@
 .description-card {
   line-height: 1.5;
   font-size: 2.4vh !important;
+  margin-top: 20px;
 }
 
 .company-card {
@@ -169,13 +177,6 @@
   font-size: 12px;
   font-weight: lighter;
   color: #9f9f9f;
-}
-
-/* Image support */
-.popup-image {
-  max-width: 100%;
-  max-height: 60%;
-  object-fit: contain;
 }
 
 /* Language icons */
@@ -203,4 +204,4 @@
 .language-icons .fa-node-js { color: #339933; }
 .language-icons .fa-database { color: #336791; }
 .language-icons .fa-code { color: #E44D26; }
-.language-icons .fa-hashtag { color: #68217A; } 
+.language-icons .fa-hashtag { color: #68217A; }

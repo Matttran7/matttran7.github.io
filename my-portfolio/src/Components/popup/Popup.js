@@ -3,6 +3,8 @@ import './Popup.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Popup({ event, onClose, page, onNextPage, onPrevPage }) {
+  const hasImage = event[4] && event[4].length > 0;
+
   return (
     <div className="popup-overlay" onClick={onClose}>
       <div className="popup-content" onClick={(e) => e.stopPropagation()}>
@@ -29,13 +31,13 @@ function Popup({ event, onClose, page, onNextPage, onPrevPage }) {
             ) : (
               <>
                 <div className="image-container">
-                  {event[4] && <img src={event[4]} alt={"Error Loading Image..."} className="popup-image" />}
+                  {hasImage && <img src={event[4]} alt={"Error Loading Image..."} className="popup-image" />}
                 </div>
               </>
             )}
           </div>
         </div>
-        {page === 1 && event[2] && (
+        {page === 1 && hasImage && (
           <button className="nav-button next" onClick={onNextPage}>
             <span className="arrow right"></span>
           </button>
