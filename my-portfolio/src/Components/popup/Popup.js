@@ -11,6 +11,7 @@ function Popup({ event, onClose, page, onNextPage, onPrevPage }) {
         <div className="popup-inner">
           <div className="page-content">
             <h2 className='pop-Title-card'>{event[0]}</h2>
+            <p className="label-card">{event[6] ? "Work Experience" : "Project Experience"}</p>  {/* Display Work or Project */}
             {page === 1 ? (
               <>
                 {event[2] && <p className='description-card'>{event[2]}</p>}

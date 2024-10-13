@@ -9,7 +9,7 @@ const MiddleHeader = () => {
         <div className={styles.text}>
           <div className={styles.titleText}>Software Engineer</div>
           <Link to="/resume">
-          <div className={styles.emailText}>My Resume 📝</div>
+          <div className={styles.emailText}>My Resume →</div>
           </Link>
         </div>
     </div>
