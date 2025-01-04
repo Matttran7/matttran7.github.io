@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import HexagonGrid from './Hexgons/HexagonGrid';
 import './ResponsiveHeader.css';
 
 const ResponsiveHeader = () => {
@@ -17,7 +16,7 @@ const ResponsiveHeader = () => {
 
   return (
     <div className="container">
-      {!isMobile && <HexagonGrid />}
+
       <div className="content-wrapper">
         <img
           src={`${process.env.PUBLIC_URL}/images/matttran_poly.png`}

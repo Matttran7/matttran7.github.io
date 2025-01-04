@@ -10,6 +10,7 @@
   text-align: center;
   width: 100%;
   overflow-x: hidden;
+  font-family: 'Open Sans', arial, sans-serif;
 }
 
 /* Retain other existing styles for MiddleHeader, Timeline, etc. */
