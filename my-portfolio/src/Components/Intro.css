@@ -1,4 +1,4 @@
-/* ResponsiveHeader.css */
+/* Intro.css */
 :root {
     --max-content-width: 1800px;
     --min-font-size: 45px; 
@@ -26,8 +26,8 @@
   }
   
   .logo {
-    width: 40%; /* Increased from 30% */
-    max-width: 400px; /* Increased from 300px */
+    width: 30%; 
+    max-width: 300px;
     height: auto;
     margin-right: 2rem;
   }
@@ -61,8 +61,8 @@
     }
   
     .logo {
-      width: 80%; /* Increased from 60% */
-      max-width: 300px; /* Increased from 200px */
+      width: 55%; 
+      max-width: 200px; 
       margin-right: 0;
       margin-bottom: 1rem;
     }
@@ -72,13 +72,11 @@
     }
   }
   
-  /* New media query for very large screens */
   @media (min-width: 1600px) {
     :root {
-      --max-font-size: 96px; /* Even larger font size for very large screens */
+      --max-font-size: 96px;
     }
-  
     .logo {
-      max-width: 500px; /* Larger logo for very large screens */
+      max-width: 300px; 
     }
   }

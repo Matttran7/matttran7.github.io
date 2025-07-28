@@ -3,6 +3,18 @@
   --max-content-width: 1200px;
   --min-font-size: 16px;
   --max-font-size: 48px;
+  --header-height: 60px;
+  --header-height-mobile: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .App {
@@ -11,16 +23,58 @@
   width: 100%;
   overflow-x: hidden;
   font-family: 'Open Sans', arial, sans-serif;
+  padding-top: var(--header-height);
+  min-height: 100vh;
+  background: #13151a;
 }
 
-/* Retain other existing styles for MiddleHeader, Timeline, etc. */
-
-/* Example: 
 .Timeline-body {
+  padding: 40px 20px;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+}
+
+/* MiddleHeader spacing */
+.MiddleHeader {
+  margin-bottom: 40px;
   padding: 20px;
 }
 
-.MiddleHeader {
-  margin-bottom: 30px;
+/* Smooth scrolling offset for anchors */
+#experiences,
+#contact {
+  scroll-margin-top: var(--header-height);
 }
-*/
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .App {
+    padding-top: var(--header-height-mobile);
+  }
+  
+  .Timeline-body {
+    padding: 20px 10px;
+  }
+  
+  .MiddleHeader {
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+  
+  #experiences,
+  #contact {
+    scroll-margin-top: var(--header-height-mobile);
+  }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .Timeline-body {
+    padding: 30px 20px;
+  }
+}
+
+/* Ensure smooth transitions */
+* {
+  transition: margin 0.3s ease, padding 0.3s ease;
+}

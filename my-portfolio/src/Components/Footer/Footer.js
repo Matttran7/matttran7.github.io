@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer id="contact" className={styles.footer}>
       <div className={styles.footerContent}>
         <div className={styles.emailText}>matthewatran7@gmail.com</div>
         <div className={styles.socialLinks}>

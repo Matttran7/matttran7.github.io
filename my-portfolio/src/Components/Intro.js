@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './ResponsiveHeader.css';
+import './Intro.css';
 
-const ResponsiveHeader = () => {
+const Intro = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -35,4 +35,4 @@ const ResponsiveHeader = () => {
   );
 };
 
-export default ResponsiveHeader;
+export default Intro;
