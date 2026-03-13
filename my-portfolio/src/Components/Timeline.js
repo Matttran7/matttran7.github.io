@@ -40,52 +40,36 @@ function Timeline() {
 
   const events = [
     {
-      title: "Computer Science Grader",
-      company: "University of Portland",
-      description: "Evaluated students' work in Analysis of Algorithms and Intro to Computer Science courses. Assessed ~15 algorithm assignments and 30 Java projects weekly, providing in-depth feedback and tutoring support for complex programming concepts.",
-      date: "Aug 2022 - Dec 2023",
-      icons: [faJava],
-      type: "work"
-    },
-    {
-      title: "Shogi Mobile Game",
-      company: "Academic Project",
-      description: "Led development of an Android-based Shogi game using Agile methodologies. Implemented core game mechanics including piece movement, capture, and promotion systems. Managed team through Trello and maintained code quality with JUnit testing.",
-      date: "Fall 2022",
-      icons: [faAndroid, faJava],
-      type: "project"
-    },
-    {
       title: "Machine Learning Researcher",
       company: "University of Portland",
-      description: "Developed AI system simulating natural animal behavior using deep learning. Improved agent exploration by 33% and achieved 50% performance increase through Hadoop cluster integration. Reduced onboarding time by 33% through enhanced documentation.",
-      date: "Jun 2023 - Jun 2024",
+      description: "Developed adaptive AI behavior models using .NET (C#) and the CognitiveABM framework. Improved runtime efficiency by 50% and enabled scalable experimentation via multi-node Hadoop (HDFS) integration. Presented research at the Undergraduate Research Symposium and Founder's Day.",
+      date: "Jun 2023 - May 2024",
       icons: [faHashtag, faPython, faDatabase],
       type: "work"
     },
     {
       title: "AR HoloLens Developer",
-      company: "Tektronix",
-      description: "Created AR data visualization tool for electromagnetic waveforms. Integrated ML models (RNN, SVR, LSTM) to predict AM waveforms from 2.5M+ data points. Used Unity, C#, and Python with TensorFlow for implementation.",
+      company: "Tektronix (University of Portland Capstone)",
+      description: "Built an AR waveform prediction tool using Unity/C# and TensorFlow (RNN, LSTM). Backed by a MySQL database of 2.5M+ records for model assessment and data quality validation. Showcased at the University of Portland Shiley Showcase.",
       date: "Fall 2023",
       icons: [faPython, faDatabase],
       type: "project"
     },
     {
-      title: "Project Finder",
-      company: "Personal Project",
-      description: "Developing full-stack web application for project showcase and collaboration. Migrated database from AWS RDS to Azure SQL for improved scalability. Following Agile practices with Jira, Figma, and Kanban workflow.",
-      date: "Present",
-      icons: [faReact, faNodeJs, faDatabase],
-      type: "project"
+      title: "Software Engineer",
+      company: "Framatome",
+      description: "Led full-stack development of a nuclear dose report traceability platform using Vue, .NET (C#), EF Core, RabbitMQ, and MS SQL with containerized Docker deployments. Designed automated pipelines for safety-critical report classification, reducing manual review by 85% and improving accuracy by 10%. Boosted model reliability 30–50% through controlled preprocessing on datasets of 20K–60K records. Integrated Azure DevOps CI/CD with AI services via Model Context Protocol (MCP).",
+      date: "Sep 2024 - Present",
+      icons: [faHashtag, faPython, faDatabase],
+      type: "work"
     },
     {
-      title: "Software Engineer I",
-      company: "Framatome",
-      description: "Working as a Software Engineer in enterprise software development, applying modern development practices and collaborating with cross-functional teams.",
-      date: "Present",
-      icons: [faHashtag, faPython],
-      type: "work"
+      title: "Multiplayer Unity Game",
+      company: "Personal Project",
+      description: "Designing join and reconnect workflows for session continuity across client disconnects and late joins. Applied defensive programming to prevent unauthorized client-side state manipulation by validating all critical updates against host-controlled state.",
+      date: "Aug 2025 - Present",
+      icons: [faHashtag],
+      type: "project"
     }
   ];
 
