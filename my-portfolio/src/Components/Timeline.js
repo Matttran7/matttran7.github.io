@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Timeline.css';
-import { faJava, faPython, faAndroid, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase, faHashtag } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { events } from '../Models/events';
 
 function Timeline() {
   const itemsRef = useRef([]);
   const [expandedIndex, setExpandedIndex] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -38,43 +39,13 @@ function Timeline() {
     };
   }, []);
 
-  const events = [
-    {
-      title: "Machine Learning Researcher",
-      company: "University of Portland",
-      description: "Developed adaptive AI behavior models using .NET (C#) and the CognitiveABM framework. Improved runtime efficiency by 50% and enabled scalable experimentation via multi-node Hadoop (HDFS) integration. Presented research at the Undergraduate Research Symposium and Founder's Day.",
-      date: "Jun 2023 - May 2024",
-      icons: [faHashtag, faPython, faDatabase],
-      type: "work"
-    },
-    {
-      title: "AR HoloLens Developer",
-      company: "Tektronix (University of Portland Capstone)",
-      description: "Built an AR waveform prediction tool using Unity/C# and TensorFlow (RNN, LSTM). Backed by a MySQL database of 2.5M+ records for model assessment and data quality validation. Showcased at the University of Portland Shiley Showcase.",
-      date: "Fall 2023",
-      icons: [faPython, faDatabase],
-      type: "project"
-    },
-    {
-      title: "Software Engineer",
-      company: "Framatome",
-      description: "Led full-stack development of a nuclear dose report traceability platform using Vue, .NET (C#), EF Core, RabbitMQ, and MS SQL with containerized Docker deployments. Designed automated pipelines for safety-critical report classification, reducing manual review by 85% and improving accuracy by 10%. Boosted model reliability 30–50% through controlled preprocessing on datasets of 20K–60K records. Integrated Azure DevOps CI/CD with AI services via Model Context Protocol (MCP).",
-      date: "Sep 2024 - Present",
-      icons: [faHashtag, faPython, faDatabase],
-      type: "work"
-    },
-    {
-      title: "Multiplayer Unity Game",
-      company: "Personal Project",
-      description: "Designing join and reconnect workflows for session continuity across client disconnects and late joins. Applied defensive programming to prevent unauthorized client-side state manipulation by validating all critical updates against host-controlled state.",
-      date: "Aug 2025 - Present",
-      icons: [faHashtag],
-      type: "project"
-    }
-  ];
-
   const handleCardClick = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
+  const handleResearchLinkClick = (e, path) => {
+    e.stopPropagation(); // prevent card collapse on link click
+    navigate(path);
   };
 
   return (
@@ -82,7 +53,7 @@ function Timeline() {
       {isMobile && (
         <div className="mobile-hint">Tap to expand</div>
       )}
-      
+
       <div className="timeline-container">
         {events.map((event, index) => (
           <div
@@ -99,10 +70,24 @@ function Timeline() {
                   <span className="date">{event.date}</span>
                 </div>
               </div>
-              
+
               <div className={`card-content ${expandedIndex === index ? 'show' : ''}`}>
                 <p className="description">{event.description}</p>
-                
+
+                {event.researchLinks && (
+                  <div className="research-links">
+                    {event.researchLinks.map((link, i) => (
+                      <button
+                        key={i}
+                        className="research-link-btn"
+                        onClick={(e) => handleResearchLinkClick(e, link.path)}
+                      >
+                        {link.label} →
+                      </button>
+                    ))}
+                  </div>
+                )}
+
                 <div className="card-footer">
                   <div className="tech-icons">
                     {event.icons.map((icon, iconIndex) => (
@@ -115,10 +100,9 @@ function Timeline() {
                 </div>
               </div>
             </div>
-            
           </div>
         ))}
-        
+
         <div className="timeline-line"></div>
       </div>
     </div>
