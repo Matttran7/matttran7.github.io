@@ -3,6 +3,15 @@ import { faDatabase, faHashtag } from '@fortawesome/free-solid-svg-icons';
 
 export const events = [
   {
+    title: "Computer Science Grader",
+    company: "University of Portland",
+    description:
+      "Evaluated Java and algorithms assignments weekly, provided code reviews, and tutored students on object-oriented programming principles, data structures, and algorithms.",
+    date: "Aug 2022 - Dec 2023",
+    icons: [faHashtag, faDatabase],
+    type: "work",
+  },
+  {
     title: "Machine Learning Researcher",
     company: "University of Portland",
     description:
